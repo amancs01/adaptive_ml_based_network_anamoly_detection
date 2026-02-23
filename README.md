@@ -4,28 +4,6 @@ This project captures live network traffic using **Npcap + PcapPlusPlus**, aggre
 
 This repository currently focuses on the **Flow Feature Extraction + CSV Generation** stage.
 
----
-
-feature_extract/
-│
-├── src/
-│ └── main.cpp # Core packet capture & flow aggregation code
-│
-├── bin/
-│ └── main.exe # Pre-built executable (run-only for team)
-│
-├── data/
-│ └── .gitkeep # Folder for generated CSV files (not tracked)
-│
-├── scripts/
-│ └── merge_csv.py # Script to merge multiple team CSVs
-│
-├── build.bat # Build script (for maintainer only)
-├── run.bat # Quick run script
-├── .gitignore
-└── README.md
-
----
 # 🔧 What This Program Does
 
 1. Lists available network adapters
@@ -166,62 +144,3 @@ Use:
 PowerShell requires `.\` to run from current directory.
 
 ---
-
-# 📌 Current Scope (Mid-Term)
-
-✔ Live packet capture  
-✔ Flow aggregation  
-✔ Flow feature extraction  
-✔ CSV generation aligned with CICIDS-style format  
-
----
-
-# 🔮 Future Improvements (Final Phase)
-
-- TCP stream reassembly
-- Retransmission handling
-- Bulk transfer detection
-- TCP window tracking
-- More advanced CICIDS feature parity
-
----
-
-# 👥 Team Workflow
-
-1. Clone repository
-2. Install Npcap
-3. Run capture
-4. Save CSV in `data/`
-5. Merge using script
-6. Train XGBoost model
-
----
-
-# 📊 Output Example
-
-FlowID, SrcIP, DstIP, SrcPort, DstPort, Protocol, DurationMs, Packets, Bytes, ...
-
----
-
-# 📎 Notes
-
-- Build process is required only for development.
-- Team members only need Npcap + main.exe.
-- CSV files are not tracked in Git to avoid conflicts.
-
----
-
-# 📚 Technologies Used
-
-- C++
-- PcapPlusPlus
-- Npcap
-- Python (for merging)
-- XGBoost (ML stage)
-
----
-
-# 🏁 Status
-
-Flow feature extraction system operational.
-Ready for dataset collection and ML training.
